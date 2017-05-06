@@ -1,4 +1,3 @@
-var wordsArray = ["monitor", "program", "application", "keyboard", "javascript", "gaming", "network"];
 var word;
 var goesLeft;
 var placeholder;
@@ -15,10 +14,9 @@ var currentWord = 0;
 
     placeholder = "";
     goesLeft = 10;
-    word = wordsArray[Math.floor(Math.random() * wordsArray.length)];
-    word = letter().toLowerCase();
-    //currentWord = 0;
-    //word = wordsArray[currentWord];
+    word = getWord().toLowerCase();
+    //console.log(word);
+
     wordLength = word.length;
     wordSubstring = currentWord.substring;
     console.log(word);
@@ -139,55 +137,59 @@ var currentWord = 0;
 
 	drawArray = [step9, step8, step7, step6, step5, head, step4, step3, step2, step1];
 
-var letter = function() {
-	$.ajax({
-	    type: "GET",
-	    url: "dictionary.txt",
-	    dataType: "text",
+// letter = function() {
+// 	var thisOne = tryMe;
+// 	return thisOne;
+// }
+
+// tryMe = function() {
+// 	var test;
+// 	$.ajax({
+// 		async: "false",
+// 	    type: "GET",
+// 	    url: "https://raw.githubusercontent.com/sindresorhus/word-list/master/words.txt",
+// 	    dataType: "text",
+// 	    success: function(data) {
+// 	      test = processData(data);
+// 	      console.log(test);
+// 	    }
+//   	});
+//   	console.log(test);
+
+//   	return test;
+// }();
+
+getWord = function() {
+	var data = $.ajax({
+	    type: 'get',       
+	    url: "https://raw.githubusercontent.com/sindresorhus/word-list/master/words.txt",
+	    dataType: 'text',
+	    global: false,
+	    async:false,
 	    success: function(data) {
-	      processData(data);
-	    }
-  	});
-
-
-	return process;
+	        return data;
+    	}
+	}).responseText;
+	var actualWord = processData(data);
+	//console.log(actualWord);
+	return actualWord;
 
 }
 
-var XMLHttpRequestObject = false; 
- 
-      if (window.XMLHttpRequest) {
-        XMLHttpRequestObject = new XMLHttpRequest();
-      } else if (window.ActiveXObject) {
-        XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
-      }
- 
-      function getData(dataSource, divID) 
-      { 
-	  
-        if(XMLHttpRequestObject) {
-          var obj = document.getElementById(divID); 
-          XMLHttpRequestObject.open("GET", dataSource); 
- 
-          XMLHttpRequestObject.onreadystatechange = function() 
-          { 
-            if (XMLHttpRequestObject.readyState == 4 && 
-              XMLHttpRequestObject.status == 200) { 
-                obj.innerHTML = XMLHttpRequestObject.responseText; 
-            } 
-          } 
- 
-          XMLHttpRequestObject.send(null); 
-        }
-      }
+	function processData(data) {
+		var wordList = data.split("\n");
+		var wordActual = wordList[Math.floor(Math.random() * wordList.length)];
+		return wordActual;
 
-var process = function processData(allText) {
-		var wordList = allText.split(/\r\n|\n/);
-		var lett = wordList[Math.floor(Math.random() * wordList.length)];
-		return lett;
 	}
+
 window.onload = function() {
 	newGame();
 	document.getElementById("button").onclick = guessLetter;
 	document.getElementById("reset1").onclick = newGame;
+}
+
+contact = function() {
+	alert("This project was created by Luke Dobson for CPSC 112 at Yale University. " +  
+		" All questions should be directed to luke.dobson@yale.edu.")
 }

@@ -128,12 +128,18 @@ main .button {
     border: 1px solid #FC575E;
     border-radius:.25rem;
     transition: .4s;
+    cursor: pointer;
 }
 
 main .button:hover {
 	color: initial;
     background-color: #FC575E;
     border-color: #FC575E;
+    outline:none;
+}
+
+main .button:focus {
+	outline:none;
 }
 
 

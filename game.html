@@ -6,8 +6,8 @@
 <link rel="stylesheet" type="text/css" href="default.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-<script type="text/javascript" src="default.js"></script>
 <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="default.js"></script>
 
 </head>
 <body>
@@ -17,11 +17,11 @@
 			<li class="nav-item title">
 				<a href="index.html">Hangman XTREME</a>
 			</li>
-			<li class="nav-item">
+			<!--<li class="nav-item">
 				<a href="about.html">About</a>
-			</li>
+			</li>-->
 			<li class="nav-item">
-				<a href="contact.html">Contact</a>
+				<a onclick="contact()">Contact</a>
 			</li>
 		</ul>
 	</nav>
@@ -42,26 +42,10 @@
 		<div class="col1of2 last-col">
 			<canvas id="hangmanimage">Your browser does not support the Canvas feature of HTML5.  
 			Please upgrade your browser and try again.</canvas>
-		</div>
-
-
-	<form>
-      <input type="button" value="Display Message"
-        onclick = "getData('data.txt', 'targetDiv')"> 
-    </input></form>
- 
-    <div id="targetDiv">
-      <p>The fetched data will go here.</p> 
-    </div> 
-	
-		
-
 			
 		</div>
 	</div>
 </main>
-
-<iframe id="frmFile" src="dictionary.txt" style="display: none;"></iframe>
 
 
 <footer class="footer">
@@ -77,13 +61,13 @@
 				Home
 				</a>
 			</li>
-			<li>
+			<!--<li>
 				<a href="about.html">
 				About
 				</a>
-			</li>
+			</li>-->
 			<li>
-				<a href="contact.html">
+				<a onclick="contact()">
 				Contact
 				</a>
 			</li>
