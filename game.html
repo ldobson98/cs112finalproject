@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Play Hangman XTREME</title>
+
+<link rel="stylesheet" type="text/css" href="default.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<script type="text/javascript" src="default.js"></script>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+<header class="navbar">
+	<nav class="container">
+		<ul class="navlist">
+			<li class="nav-item title">
+				<a href="index.html">Hangman XTREME</a>
+			</li>
+			<li class="nav-item">
+				<a href="about.html">About</a>
+			</li>
+			<li class="nav-item">
+				<a href="contact.html">Contact</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+</main>
+<main class ="game">
+	<div class="container intro">
+		<h1>Hangman XTREME</h1>
+		<p class="rules"><i>Rules: </i> Each word is randomly chosen from the dictionary.  To guess a letter, simply type it in the field below and click "Submit."  If it is correct, the letter will be filled in. If the letter is incorrect, you will see the Hangman picture start to come to completion. Good luck!</p>
+
+		<div class="col1of2">
+			<div id="placeholder"></div>
+			<input id="guessinput" type="text" size="20" maxlength="1" placeholder="Enter a letter"/>
+			<button id="button" class="guess-button button">Click to guess</button>
+			<button id="reset1" class="guess-button button">Reset</button>	
+		</div>
+		<div class="col1of2 last-col">
+			<canvas id="hangmanimage">Your browser does not support the Canvas feature of HTML5.  
+			Please upgrade your browser and try again.</canvas>
+		</div>
+
+
+	<form>
+      <input type="button" value="Display Message"
+        onclick = "getData('data.txt', 'targetDiv')"> 
+    </input></form>
+ 
+    <div id="targetDiv">
+      <p>The fetched data will go here.</p> 
+    </div> 
+	
+		
+
+			
+		</div>
+	</div>
+</main>
+
+<iframe id="frmFile" src="dictionary.txt" style="display: none;"></iframe>
+
+
+<footer class="footer">
+	<div class="container">
+		<ul class="footer links">
+			<li>
+				<a href="game.html" class="button">
+				Play
+				</a>
+			</li>
+			<li>
+				<a href="index.html">
+				Home
+				</a>
+			</li>
+			<li>
+				<a href="about.html">
+				About
+				</a>
+			</li>
+			<li>
+				<a href="contact.html">
+				Contact
+				</a>
+			</li>
+		</ul>
+		<p>
+			Designed by Luke Dobson as a project for CPSC 112 at Yale University.
+		</p>
+	</div>
+</footer>
+
+</body>
+</html>

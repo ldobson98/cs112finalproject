@@ -1,0 +1,245 @@
+/* CSS Style by LUKE DOBSON
+
+ normal reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	color:#112233;
+	font-family: 'Roboto', sans-serif;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+section:after, section:before, header, main, .button-box {
+    content: "";
+    clear: both;
+    display: table;
+}
+a {
+	text-decoration: none;
+	font-color: inherit;
+}
+
+i {
+	font-style: italic;
+}
+
+/* all screen sizes
+	all pages*/
+footer {
+	padding: 4rem 0;
+    margin-top: 2rem;
+    font-size: 85%;
+    text-align: left;
+    background-color: #f7f7f7;
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+h1 {
+	font-size: xx-large;
+	font-variant: small-caps;
+	margin-bottom: 20px;
+}
+
+/*nav bar*/
+.navlist {
+	width:100%;
+	position: relative;
+}
+
+.navlist>li>a {
+	color:white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+header {
+	background-color:#FC575E;
+	width: 100%;
+}
+
+/*main*/
+main {
+	padding: 50px 0;
+	text-align: center;
+	width: 100%;
+}
+
+main .button-box {
+	margin-left:auto;
+	margin-right: auto;
+	margin-bottom: 3em;
+	margin-top:4em;
+}
+
+main .button {
+	width:100%;
+	padding:1rem 2rem;
+	font-size:1.25rem;
+	font-weight: 500;
+	color: #FC575E;
+    border: 1px solid #FC575E;
+    border-radius:.25rem;
+    transition: .4s;
+}
+
+main .button:hover {
+	color: initial;
+    background-color: #FC575E;
+    border-color: #FC575E;
+}
+
+
+/*footer*/
+footer .links {
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+/*game*/
+.rules {
+	font-size: large;
+	line-height: 1.35;
+	margin-bottom: 20px;
+}
+
+input[type="text"] {
+	border:none;
+	border-bottom: 2px solid red;
+	width: 100%;
+}
+
+input[type="text"]:focus {
+  outline: 0;
+  border-color:	#C40233;
+} 
+
+#guessinput {
+	height:30px;
+} 
+
+main .guess-button {
+	background-color:white;
+	height:30px;
+	font-size: small;
+	padding:3px;
+	top:3px;
+	position: relative;
+
+}
+
+#placeholder {
+	font-size: larger;
+	letter-spacing: 3px;
+	margin-bottom: 20px;
+}
+
+
+/*responsive mobile*/
+@media (min-width: 768px) {
+	/*header*/
+	.navlist>li {
+		float: left;
+		margin: 0;
+	}
+
+	.navlist>li>a {
+		padding:15px;
+		display:inline-block;
+
+	}
+
+	.container {
+		width:700px;
+	}
+
+	.header .container {
+		padding: 10px 20px;
+	}
+
+	main p.intro {
+		font-size: 30px;
+		line-height: 1.3;
+		margin-bottom: 30px;
+	}
+
+	main .button {
+		width: auto;
+
+	}
+
+	footer ul>li {
+		display: inline-block;
+	}
+	footer ul>li+li {
+		margin-left: 15px;
+	}
+
+	.col1of2 {
+		width: 48%;
+		margin-left: 0;
+		margin-right: 4%;
+		float:left;
+	}
+
+	.last-col {
+		margin-right:0;
+	}
+
+	input[type="text"] {
+		width: auto;
+	}
+}
+
+@media (min-width: 1300px) {
+	.container {
+		width:1200px;
+	}
+}
