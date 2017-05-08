@@ -1,3 +1,14 @@
+<!--********************************************************************
+//
+//   File: game.html   Assignment No.: Final Project
+//
+//   Author: Luke Dobson      Email: luke.dobson@yale.edu
+//
+//   
+//      The game page for the Hangman game.
+//
+//*******************************************************************-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +28,9 @@
 			<li class="nav-item title">
 				<a href="index.html">Hangman XTREME</a>
 			</li>
+			<li class="nav-item title">
+				<a href="game.html">Play</a>
+			</li>
 			<!--<li class="nav-item">
 				<a href="about.html">About</a>
 			</li>-->
@@ -31,13 +45,19 @@
 <main class ="game">
 	<div class="container intro">
 		<h1>Hangman XTREME</h1>
-		<p class="rules"><i>Rules: </i> Each word is randomly chosen from the dictionary.  To guess a letter, simply type it in the field below and click "Submit."  If it is correct, the letter will be filled in. If the letter is incorrect, you will see the Hangman picture start to come to completion. Good luck!</p>
+		<p class="rules"><i>Rules: </i> Each word is randomly chosen from the dictionary.  To guess a letter, simply type it in the field below and click the guess button.  If the letter is correct, then it will display. If the letter is incorrect, you will see the Hangman picture start to come to completion. Good luck!</p>
 
 		<div class="col1of2">
 			<div id="placeholder"></div>
-			<input id="guessinput" type="text" size="20" maxlength="1" placeholder="Enter a letter"/>
-			<button id="button" class="guess-button button">Click to guess</button>
-			<button id="reset1" class="guess-button button">Reset</button>	
+			<div class="word-description">WORD</div>
+			<div class="inputs">
+				<form id="main-form">
+					<input id="guessinput" type="text" size="20" maxlength="1" autocomplete="off" placeholder="Enter a letter"/>
+				</form>
+				<button id="button" class="guess-button button" type="submit">Click to guess</button>
+				<button id="reset1" class="guess-button button" type="button">Reset</button>
+			</div>
+			<div id="lives"></div>	
 		</div>
 		<div class="col1of2 last-col">
 			<canvas id="hangmanimage">Your browser does not support the Canvas feature of HTML5.  
@@ -52,13 +72,13 @@
 	<div class="container">
 		<ul class="footer links">
 			<li>
-				<a href="game.html" class="button">
-				Play
+				<a href="index.html">
+				Home
 				</a>
 			</li>
 			<li>
-				<a href="index.html">
-				Home
+				<a href="game.html" class="button">
+				Play
 				</a>
 			</li>
 			<!--<li>

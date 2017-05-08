@@ -89,8 +89,8 @@ window.onload = function () {
 		manFigure = document.getElementbyId("stickman");
 		context = manFigure.getContext('2d');
 		context.beginPath();
-		context.strokeStyle = "#000000";
-		context.lineWidth = 2;
+		context.strokeStyle = "#FC575E";
+		context.lineWidth = 2; 
 	};
 
 	head = function () {
@@ -214,6 +214,7 @@ window.onload = function () {
     letters.parentNode.removeChild(letters);
     showClue.innerHTML = "";
     context.clearRect(0, 0, 400, 400);
+
     play();
   }
 

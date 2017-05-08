@@ -1,3 +1,14 @@
+/********************************************************************
+//
+//   File: default.css     Assignment No.: Final Project
+//
+//   Author: Luke Dobson      Email: luke.dobson@yale.edu
+//
+//   --------------------
+//      Stylesheet for a game of hangman on the web.
+//
+//*******************************************************************/
+
 /* CSS Style by LUKE DOBSON
 
  normal reset */
@@ -184,9 +195,26 @@ main .guess-button {
 #placeholder {
 	font-size: larger;
 	letter-spacing: 3px;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 }
 
+#main-form {
+	display: inline;
+}
+
+.word-description {
+	color:grey;
+	font-size: 10px;
+	/*letter spacing and text indent should be the same*/
+	letter-spacing: 10px;
+	text-indent: 10px;
+
+	margin-bottom: 30px;
+}
+
+.inputs {
+	margin-bottom: 20px;
+}
 
 /*responsive mobile*/
 @media (min-width: 768px) {
